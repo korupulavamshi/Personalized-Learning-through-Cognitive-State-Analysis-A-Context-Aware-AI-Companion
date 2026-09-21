@@ -1,0 +1,127 @@
+/* ===== Base Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Headings ===== */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+}
+
+/* ===== Pages (Common) ===== */
+#videoPage,
+#choicePage,
+#textPage,
+#quizPage,
+#dashboardPage {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ===== VIDEO PAGE (IMPORTANT FIX) ===== */
+#videoPage {
+    display: flex;                 /* MUST stay flex */
+    flex-direction: column;
+    align-items: center;           /* horizontal center */
+    justify-content: center;       /* vertical balance */
+    min-height: 450px;             /* prevents jump */
+}
+
+/* YouTube iframe */
+#videoPlayer {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* Status text */
+#statusText {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ===== Choice Page ===== */
+#choicePage {
+    background-color: #fff3cd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#choicePage h2 {
+    color: #856404;
+}
+
+/* ===== Text Page ===== */
+#textPage {
+    background-color: #e8f4fd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ===== Quiz Page ===== */
+#quizPage {
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Quiz options */
+#options button {
+    display: block;
+    margin: 10px auto;
+    width: 60%;
+}
+
+/* ===== Dashboard Page ===== */
+#dashboardPage {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Recommendation text */
+#recommendation {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 10px 15px;
+    margin: 8px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
