@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalized Learning – Cognitive State Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Lesson 1: Introduction to Artificial Intelligence</h1>
+
+    <!-- VIDEO PAGE -->
+    <div id="videoPage">
+        <iframe
+            id="videoPlayer"
+            width="700"
+            height="400"
+            src="https://www.youtube.com/embed/JMUxmLyrhSk?enablejsapi=1&rel=0"
+            allowfullscreen>
+        </iframe>
+        <h2 id="statusText">Observing learner...</h2>
+    </div>
+
+    <!-- CHOICE PAGE -->
+    <div id="choicePage" style="display:none;">
+        <h2>You seem distracted</h2>
+        <button onclick="navigateTo('text')">View Text Summary</button>
+        <button onclick="showQuiz()">Take Quiz</button>
+    </div>
+
+    <!-- TEXT PAGE -->
+    <div id="textPage" style="display:none;">
+        <h2>Lesson Summary</h2>
+        <p>
+            Artificial Intelligence enables machines to simulate human intelligence.
+            It allows systems to learn from data and improve performance.
+            AI supports reasoning, problem solving, and decision making.
+            Machine Learning is a core subset of AI.
+            AI is used in speech recognition and image processing.
+            It helps analyze large datasets efficiently.
+            AI improves automation and reduces human effort.
+            It is widely used in healthcare and education.
+            AI systems can adapt over time.
+            AI is shaping future technologies.
+        </p>
+        <button onclick="navigateTo('video')">Back to Video</button>
+    </div>
+
+    <!-- QUIZ PAGE -->
+    <div id="quizPage" style="display:none;">
+        <h2>Quiz</h2>
+        <p id="question"></p>
+        <div id="options"></div>
+        <p id="result"></p>
+        <button onclick="navigateTo('video')">Back to Video</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboardPage" style="display:none;">
+        <h2>Dashboard</h2>
+        <p>🟢 Attentive Time: <span id="attentiveTime">0</span>s</p>
+        <p>🔴 Distracted Time: <span id="distractedTime">0</span>s</p>
+        <p>⚠️ Distractions: <span id="distractionCount">0</span></p>
+        <button onclick="showRecommendation()">Get Recommendation</button>
+        <p id="recommendation"></p>
+        <button onclick="navigateTo('video')">Back to Video</button>
+
+    </div>
+
+    <button onclick="navigateTo('dashboard')">View Dashboard</button>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
